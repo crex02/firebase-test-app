@@ -1,0 +1,14 @@
+<header>
+<h1>{{title | uppercase}}  </h1>
+<div class="spacer"></div>
+<button (click)="authServ.signIn()">Sign In</button>
+</header>
+<main class="giga-container">
+
+<div class="container" *ngFor="let manga of mangas">
+  <h3>{{manga.title}}</h3>
+  <span>Anno: {{manga.year}}</span>
+  <br>
+  <span>{{manga.completed? 'Concluso' : 'In corso'}}</span>
+</div>
+</main>

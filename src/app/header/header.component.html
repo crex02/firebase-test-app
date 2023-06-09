@@ -1,0 +1,14 @@
+<header class="header"></header>
+    <h1>Manghissimo</h1>
+    <div class="spacer"></div>
+    <div class="auth">
+        <button ngIf="!user" (click)="logIn()">login</button>
+        <button ngIf="user">logout</button>
+        <div ngIf="user" class="user-info">
+            <img class="user-img" src="" alt="">
+            <div class="user-data">
+                <span>name</span>
+                <span>email</span>
+            </div>
+        </div>
+    </div>

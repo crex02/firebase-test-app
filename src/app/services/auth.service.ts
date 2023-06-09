@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FirebaseService } from './firebase.service';
-import { Auth, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+import { Auth, getAuth, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import { Subject } from 'rxjs';
 
@@ -59,6 +59,9 @@ console.log(errorMessage)
   });
    }
 
+   signOut(){
+    signOut(this.auth)
+   }
 
 
 }
